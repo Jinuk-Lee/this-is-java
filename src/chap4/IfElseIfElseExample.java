@@ -1,6 +1,6 @@
 package chap4;
 
-public class IfElseIfElse {
+public class IfElseIfElseExample {
     public static void main(String[] args) {
         int score = 75;
 
