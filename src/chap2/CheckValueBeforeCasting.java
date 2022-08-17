@@ -11,5 +11,5 @@ public class CheckValueBeforeCasting {
             byte b = (byte) i;
             System.out.println(b);
         }
-    }S
+    }
 }
