@@ -11,11 +11,11 @@ public class Account {
         this.balance = balance;
     }
 
-    public String getAno() {
+    public String getNumber() {
         return number;
     }
 
-    public void setAno(String number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 

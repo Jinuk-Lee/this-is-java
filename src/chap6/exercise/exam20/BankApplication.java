@@ -1,5 +1,6 @@
 package chap6.exercise.exam20;
 
+
 import java.util.*;
 
 public class BankApplication {
@@ -48,32 +49,88 @@ public class BankApplication {
 
         Account newAccount = new Account(number, owner, balance);
 
+        for (int i = 0; i < accountArray.length; i++) {
+            if (accountArray[i] == null) {
+                accountArray[i] = newAccount;
+                System.out.println("결과 : 계좌가 생성되었습니다.");
+                break;
+            }
+        }
 
-        System.out.println("결과: 계좌가 생성되었습니다.");
+
     }
 
     private static void accountList() {
         System.out.println("---------------------");
         System.out.println("계좌목록");
         System.out.println("---------------------");
+        for (int i = 0; i < accountArray.length; i++) {
+            Account account = accountArray[i];
+            if (account != null) {
+                System.out.print(account.getNumber());
+                System.out.print("     ");
+                System.out.print(account.getOwner());
+                System.out.print("     ");
+                System.out.println(account.getBalance());
+            }
+        }
     }
 
     private static void deposit() {
         System.out.println("---------------------");
         System.out.println("예금");
         System.out.println("---------------------");
+        System.out.print("계좌번호: ");
+        String number = scanner.next();
+        System.out.print("예금액: ");
+        int money = scanner.nextInt();
+
+        Account account = findAccount(number);
+        if (account == null) {
+            System.out.println("결과 : 계좌가 없습니다.");
+            return;
+        }
+        account.setBalance(account.getBalance() + money);
+        System.out.print("결과: 예금이 성공되었습니다.");
+
     }
+
 
     private static void withdraw() {
         System.out.println("---------------------");
         System.out.println("출금");
         System.out.println("---------------------");
+        System.out.print("계좌번호: ");
+        String number = scanner.next();
+        System.out.print("출금액: ");
+        int money = scanner.nextInt();
+
+        Account account = findAccount(number);
+        if (account == null) {
+            System.out.println("결과 : 계좌가 없습니다.");
+            return;
+        } else if (account.getBalance() < money) {
+            System.out.println("결과: 계좌에 잔액이 부족합니다.");
+            return;
+        }
+        account.setBalance(account.getBalance() - money);
+        System.out.print("결과: 출금이 성공되었습니다.");
+
+
     }
 
 
-    private static Account findAccount(String ano) {
-
-
-        return null;
+    private static Account findAccount(String number) {
+        Account account = null;
+        for (int i = 0; i < accountArray.length; i++) {
+            if (accountArray[i] != null) {
+                String dbNumber = accountArray[i].getNumber();
+                if (dbNumber.equals(number)) {
+                    account = accountArray[i];
+                    break;
+                }
+            }
+        }
+        return account;
     }
 }
