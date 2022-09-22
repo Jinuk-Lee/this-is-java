@@ -1,4 +1,4 @@
-package chap9.nestde_class;
+package chap9.part2.nested_class_object;
 
 /* 바깥 클래스 */
 class A {

@@ -1,4 +1,4 @@
-package chap9.nestde_class;
+package chap9.part2;
 
 public class Main {
 	public static void main(String[] args) {
