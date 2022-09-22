@@ -1,4 +1,4 @@
-package chap9.part2;
+package chap9.part2.nested_class_object;
 
 public class Main {
 	public static void main(String[] args) {
@@ -16,6 +16,7 @@ public class Main {
 		A.C.field2 = 3;
 		A.C.method2();
 
+		
 		// 로컬 클래스 객체 생성을 위한 메소드 호출
 		a.method();
 	}
