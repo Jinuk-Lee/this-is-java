@@ -3,19 +3,19 @@ package chap9.part5.anonymous_extends;
 public class AnonymousExample {
 	public static void main(String[] args) {
 		Anonymous anony = new Anonymous();
-		//�͸� ��ü �ʵ� ���
+		//익명 객체 필드 사용
 		anony.field.wake();
-		//�͸� ��ü ���ú��� ���
+		//익명 객체 로컬 변수 사용
 		anony.method1();
-		//�͸� ��ü �Ű��� ���
+		//익명 개체 매개값 사용
 		anony.method2(
 			new Person() {
 				void study() {
-					System.out.println("�����մϴ�.");
+					System.out.println("공부합니다.");
 				}
 				@Override
 				void wake() {
-					System.out.println("8�ÿ� �Ͼ�ϴ�.");
+					System.out.println("8시에 일어납니다.");
 					study();
 				}
 			}
