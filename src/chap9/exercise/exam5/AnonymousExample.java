@@ -1,20 +1,18 @@
 package chap9.exercise.exam5;
 
 public class AnonymousExample {
+
 	public static void main(String[] args) {
 		Anonymous anony = new Anonymous();
-		//�͸� ��ü �ʵ� ���
 		anony.field.run();
-		//�͸� ��ü ���ú��� ���
 		anony.method1();
-		//�͸� ��ü �Ű��� ���
-		anony.method2(
-			new Vehicle() {
-				@Override
-				public void run() {
-					System.out.println("Ʈ���� �޸��ϴ�.");
-				}
+		anony.method2(new Vehicle() {
+			@Override
+			public void run() {
+				System.out.println("트럭이 달립니다.");
 			}
-		);
+		});
+
 	}
+
 }
