@@ -4,22 +4,22 @@ public class Window {
 	Button button1 = new Button();
 	Button button2 = new Button();
 	
-	//�ʵ� �ʱⰪ���� ����
+	//필드 초기값으로 대입
 	Button.OnClickListener listener = new Button.OnClickListener() {
 		@Override
 		public void onClick() {
-			System.out.println("��ȭ�� �̴ϴ�.");
+			System.out.println("전화를 겁니다.");
 		}
 	};
 	
 	Window() {
 		button1.setOnClickListener(listener);
 		
-		//�Ű������� ����
+		//필드 선언과 초기값 대입
 		button2.setOnClickListener(new Button.OnClickListener() {
 			@Override
 			public void onClick() {
-				System.out.println("�޽����� �����ϴ�.");
+				System.out.println("메세지를 보냅니다.");
 			}
 		});
 	}
