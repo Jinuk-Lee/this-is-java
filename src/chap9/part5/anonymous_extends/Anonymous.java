@@ -12,7 +12,6 @@ public class Anonymous {
 			work();
 		}
 	};
-	
 	void method1() {
 		//로컬 변수값으로 대입
 		Person localVar = new Person() {
@@ -21,14 +20,13 @@ public class Anonymous {
 			}
 			@Override
 			void wake() {
-				System.out.println("7시에 일어납니다.");
+				System.out.println("7시에 일어납니다..");
 				walk();
 			}
 		};
-		//���ú��� ���
+		//로컬 변수 사용
 		localVar.wake();
 	}
-	
 	void method2(Person person) {
 		person.wake();
 	}
