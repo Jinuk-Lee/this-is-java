@@ -1,4 +1,4 @@
-package chap12.part2.createthread;
+package chap12.part2.create_thread;
 
 public class BeepPrintExample2 {
 	public static void main(String[] args) {
