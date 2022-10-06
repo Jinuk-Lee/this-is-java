@@ -10,7 +10,7 @@ public class StatePrintThread extends Thread {
 	public void run() {
 		while(true) {
 			State state = targetThread.getState();
-			System.out.println("Ÿ�� ������ ����: " + state);
+			System.out.println("타깃 스레드 상태: " + state);
 			if(state == State.NEW) {
 				targetThread.start();
 			}
