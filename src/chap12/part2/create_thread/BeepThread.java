@@ -1,4 +1,4 @@
-package chap12.part2.createthread;
+package chap12.part2.create_thread;
 
 import java.awt.Toolkit;
 
